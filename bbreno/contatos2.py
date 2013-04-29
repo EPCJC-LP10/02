@@ -41,11 +41,14 @@ def inserir():
         
         
 def apresentar_registo(registo):
-                print "Numero: ", registo.codigo
-                print "Operador: ", registo.titulo
-                print " Nome: ", registo.autor
-                print "Email: ", registo.email
-                print "-------------------------------"
+                print "+------------------------------+"
+                print "| Numero: ", registo.codigo
+                print "| Operador: ", registo.titulo
+                print "| Nome: ", registo.autor
+                print "| Email: ", registo.email
+                print "+------------------------------+"
+                print ""
+                print ""
 
 
 def listar_todos():
