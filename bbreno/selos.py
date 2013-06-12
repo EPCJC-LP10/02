@@ -13,6 +13,8 @@ def menu():
     print "2: Listar todos os selos"
     print "3: Alterar dados de um selo"
     print "4: Eliminar selo"
+    print "5: Listar todos os selos de nome 'arte'"
+    print "6: Listar todos os selos entre 1980 e 2010"
     print
     print "0: Terminar"
     print
@@ -49,7 +51,7 @@ def inserir():
     
            
 
-def listar_todos():
+def listar_todos(registo):
     if len(Selos) == 0:
         print "Não existem livros inseridos"
         return
@@ -108,6 +110,11 @@ def eliminar():
         
     #Eliminar o registo
     Selos.pop(pos)
+    
+def pesquisar_arte():       
+    for pos in range(len(Selos)):
+        if Selos[pos].nome == 'Arte':
+            listar_todos(Selos[pos].nome)
 
 
 
@@ -118,6 +125,7 @@ from collections import namedtuple
 SeloReg = namedtuple("SeloReg", "num, nome, serie, ano")
 
 Selos = []
+
 	
 quero_sair = False
 while not quero_sair:
@@ -131,6 +139,8 @@ while not quero_sair:
         alterar()
     elif op == '4':
         eliminar()
+    elif op == '5':
+        pesquisar_arte()
     elif op == '0': 
         quero_sair = True
     else:
