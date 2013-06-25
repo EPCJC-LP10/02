@@ -2,6 +2,7 @@
 
 import menu
 import alunos
+import salas
 import util
 
 
