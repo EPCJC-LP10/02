@@ -13,7 +13,7 @@ listaAlunos = []
 def encontrar_posicao(codigo):
     pos = -1
     for i in range (len(listaAlunos)):
-        if listaAlunos[i].id == codigo:
+        if listaAlunos[i].numero == codigo:
             pos = i
             break
                             
@@ -21,12 +21,12 @@ def encontrar_posicao(codigo):
 
 
 def inserir_aluno():
-    numero = input("Qual o numero? ")
+    numero = raw_input("Insira novo numero: ")
 
     pos = encontrar_posicao(numero)
 
     if pos >= 0:
-        print "Código já existe"
+        print "numero já existe"
         return
 
     #ler dados
@@ -39,32 +39,34 @@ def inserir_aluno():
 
 
 def pesquisar_aluno():
-    cod = input("Qual o codigo do aluno a pesquisar? ")
+    novo = raw_input("Insira o numero do aluno a pesquisar: ")
 
-    pos = encontrar_posicao(cod)
+    pos = encontrar_posicao(novo)
 
     if pos == -1:
         print "Não existe aluno com esse código"
         return
 
-    print "Código: ", listaAlunos[pos].id
-    print "Nome: ", listaAlunos[pos].nome
-    
+    print "Numero:: ", listaAlunos[pos].numero
+    print "Dia: ", listaAlunos[pos].dia
+    print "hora: ", listaAlunos[pos].hora
+    print "Disciplina: ", listaAlunos[pos].disciplina
 
 
 def listar_alunos():
     for i in range (len(listaAlunos)):
-        print "Código: ", listaAlunos[i].id
-        print "Nome: ", listaAlunos[i].nome
-        
+        print "Numero: ", listaAlunos[i].numero
+        print "Dia: ", listaAlunos[i].dia
+        print "hora: ", listaAlunos[i].hora
+        print "Disciplina: ", listaAlunos[i].disciplina
   
 
 def eliminar_aluno():
-    cod = input ("Código do aluno a eliminar --> ")
-    pos = encontrar_posicao(cod)
+    numero = raw_input ("Numero do aluno a eliminar --> ")
+    pos = encontrar_posicao(numero)
 
     if pos == -1:
-        print "Não existe aluno com esse código"
+        print "Não existe aluno com esse numero"
         return
 
     # TODO: Confirmar eliminação
@@ -73,16 +75,16 @@ def eliminar_aluno():
 
     
 def alterar_aluno():
-    cod = input ("Código do aluno a alterar --> ")
-    pos = encontrar_posicao(cod)
+    numero = raw_input ("Numero do aluno a alterar --> ")
+    pos = encontrar_posicao(numero)
 
     if pos == -1:
-        print "Não existe aluno com esse código"
+        print "Não existe aluno com esse numero"
         return
 
     # só altera o nome
-    novonome = raw_input("Qual o nome? ")
-    listaAlunos[pos] = listaAlunos[pos]._replace(nome=novonome)
+    novonumero = raw_input("Insira novo numero: ")
+    listaAlunos[pos] = listaAlunos[pos]._replace(numero=novonumero)
 
 
 
@@ -93,7 +95,7 @@ def gerir():
     terminar = False
 
     while not terminar:
-        op = menu.alunos()
+        op = menu.salas()
 
         if op == '1':
             inserir_aluno()

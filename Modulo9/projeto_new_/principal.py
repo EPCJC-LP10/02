@@ -2,15 +2,18 @@
 
 import menu
 import alunos
+import salas
 import util
 
 
 # nome dos ficheiros
 fxAlunos = "fxAlunos.dat"
+fxSalas = "fxSalas.dat"
 
 def ler_ficheiros():
 	# adicionar todos ficheiros a ler
 	alunos.listaAlunos = util.ler_ficheiro(fxAlunos)
+
 
 
 def escrever_ficheiros():
