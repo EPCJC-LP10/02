@@ -37,7 +37,7 @@ def inserir_aluno():
 
 
 def pesquisar_aluno():
-    numero = input("Digite o numero do aluno a pesquisar: ")
+    numero = raw_input("Digite o numero do aluno a pesquisar: ")
 
     pos = encontrar_posicao(numero)
 
@@ -58,7 +58,7 @@ def listar_alunos():
   
 
 def eliminar_aluno():
-    numero = input ("numero do aluno a eliminar: ")
+    numero = raw_input ("numero do aluno a eliminar: ")
     pos = encontrar_posicao(numero)
 
     if pos == -1:
@@ -71,7 +71,7 @@ def eliminar_aluno():
 
     
 def alterar_aluno():
-    numero = input ("numero do aluno a alterar: ")
+    numero = raw_input ("numero do aluno a alterar: ")
     pos = encontrar_posicao(numero)
 
     if pos == -1:

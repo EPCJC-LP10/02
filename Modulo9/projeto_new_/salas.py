@@ -6,13 +6,13 @@ import menu
 
 
 horariosalas = namedtuple("horariosalas", "numero, dia, hora, disciplina")
-listaAlunos = []
+listaSalas = []
 
 
 
 def encontrar_posicao(codigo):
     pos = -1
-    for i in range (len(listaAlunos)):
+    for i in range (len(listaSalas)):
         if listaAlunos[i].numero == codigo:
             pos = i
             break
@@ -35,7 +35,7 @@ def inserir_aluno():
     disciplina = raw_input ("insira a disciplina: ")
     
     registo = horariosalas(numero, dia, hora, disciplina)
-    listaAlunos.append(registo)
+    listaSalas.append(registo)
 
 
 def pesquisar_aluno():
@@ -47,18 +47,18 @@ def pesquisar_aluno():
         print "Essa sala ainda nao foi adicionada"
         return
 
-    print "Sala: ", listaAlunos[pos].numero
-    print "Dia: ", listaAlunos[pos].dia
-    print "hora: ", listaAlunos[pos].hora
-    print "Disciplina: ", listaAlunos[pos].disciplina
+    print "Sala: ", listaSalas[pos].numero
+    print "Dia: ", listaSalas[pos].dia
+    print "hora: ", listaSalas[pos].hora
+    print "Disciplina: ", listaSalas[pos].disciplina
 
 
 def listar_alunos():
-    for i in range (len(listaAlunos)):
-        print "Sala ", listaAlunos[i].numero
-        print "Dia: ", listaAlunos[i].dia
-        print "hora: ", listaAlunos[i].hora
-        print "Disciplina: ", listaAlunos[i].disciplina
+    for i in range (len(listaSalas)):
+        print "Sala ", listaSalas[i].numero
+        print "Dia: ", listaSalas[i].dia
+        print "hora: ", listaSalas[i].hora
+        print "Disciplina: ", listaSalas[i].disciplina
   
 
 def eliminar_aluno():
@@ -70,7 +70,7 @@ def eliminar_aluno():
         returnhorariosalas
 
     # TODO: Confirmar eliminação
-    listaAlunos.pop(pos)
+    listaSalas.pop(pos)
 
 
     
@@ -84,7 +84,7 @@ def alterar_aluno():
 
     # só altera o nome
     novonumero = raw_input("Insira novo numero: ")
-    listaAlunos[pos] = listaAlunos[pos]._replace(numero=novonumero)
+    listaSalas[pos] = listaSalas[pos]._replace(numero=novonumero)
 
 def aluno_max():
     print max(horariosalas)

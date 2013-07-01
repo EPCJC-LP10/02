@@ -13,13 +13,13 @@ fxSalas = "fxSalas.dat"
 def ler_ficheiros():
     # adicionar todos ficheiros a ler
     alunos.listaAlunos = util.ler_ficheiro(fxAlunos)
-    salas.listaAlunos = util.ler_ficheiro(fxSalas)
+    salas.listaSalas = util.ler_ficheiro(fxSalas)
 
 
 def escrever_ficheiros():
     # adicionar todos ficheiros a guardar
     util.escrever_ficheiro(fxAlunos, alunos.listaAlunos)
-    util.escrever_ficheiro(fxSalas, salas.listaAlunos)
+    util.escrever_ficheiro(fxSalas, salas.listaSalas)
      
 
 
