@@ -9,6 +9,7 @@ import util
 # nome dos ficheiros
 fxAlunos = "fxAlunos.dat"
 fxSalas = "fxSalas.dat"
+fxPresencas = "fxPresencas.dat"
 
 def ler_ficheiros():
     # adicionar todos ficheiros a ler

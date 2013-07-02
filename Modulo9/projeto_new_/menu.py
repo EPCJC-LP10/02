@@ -6,6 +6,7 @@ def principal():
     print "  |                      |"
     print "  | 1. Gestão de Alunos |"
     print "  | 2. Salas / Horários |"
+    print "  | 3. Registar Presença |"
     print "  +--------------------- +"
     print "  | 0. Sair              |"
     print "  +----------------------+"
