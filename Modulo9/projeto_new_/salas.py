@@ -13,7 +13,7 @@ listaSalas = []
 def encontrar_posicao(codigo):
     pos = -1
     for i in range (len(listaSalas)):
-        if listaAlunos[i].numero == codigo:
+        if listaSalas[i].numero == codigo:
             pos = i
             break
                             
